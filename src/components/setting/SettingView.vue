@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useAppStore } from '../../stores/app'
+import { useAppStore } from '@/stores/app'
 import variables from '../../styles/variables.module.scss'
 const app = useAppStore()
 </script>
@@ -15,8 +15,8 @@ const app = useAppStore()
     <a-select-option value="light">light</a-select-option>
   </a-select>
   <a-button-group>
-    <a-button type="primary">切换主题- {{ app.themeName }}</a-button>
-    <a-button @click="app.toggleDarkMode">切换模式{{ app.darkModeComp }}</a-button>
+    <a-button type="primary">切换主题- {{ app?.themeName }}</a-button>
+    <a-button @click="app.toggleDarkMode">切换模式{{ app?.darkModeComp }}</a-button>
   </a-button-group>
 </template>
 

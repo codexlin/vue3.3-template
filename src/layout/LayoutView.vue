@@ -37,10 +37,10 @@
 </template>
 <script lang="ts" setup>
 import Setting from '@/components/setting/SettingWrapper.vue'
+import { useAppStore } from '@/stores/app'
 import { UserOutlined } from '@ant-design/icons-vue'
 import { ref } from 'vue'
 import { RouterView } from 'vue-router'
-import { useAppStore } from '../stores/app'
 const app = useAppStore()
 const onCollapse = (collapsed: boolean, type: string) => {
   console.log(collapsed, type)
